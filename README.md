@@ -99,20 +99,13 @@ python3 bot.py
 • /ban  - to ban a user.
 • /unban  - to unban a user.
 • /channel - to get list of total connected channels
-• /broadcast - to broadcast a message to all Eva Maria users
+• /broadcast - to broadcast a message to all Lucifer users
 • /batch - to create link for multiple posts
 • /link - to create link for one post
 ```
 
 
-Join Our [Support Group](https: t.me/Bkm_Botz_Support) For Support And Join Our [Updates Channel](https://telegram.dog/Bkm_Botz_Updates)) For Updates.
 
-Report Bugs, Give Feature Requests There..
-Do Fork And Star The Repository If You Liked It.
-
-<a href="https://telegram.dog/Bkm_Botz_Updates"><img alt="telegram" src="https://img.shields.io/badge/Updates-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
-
-<a href="https://telegram.dog/Bkm_Botz_Support"><img alt="telegram" src="https://img.shields.io/badge/Group-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
 
 ### Credits
 
