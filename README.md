@@ -105,7 +105,7 @@ python3 bot.py
 ```
 
 
-Join Our [Telegram Group](https: telegram.dog/Bkm_Botz_Support) For Support/Assistance And Our [Channel](https://telegram.dog/Bkm_Botz_Updates)) For Updates.
+Join Our [Support Group](https: t.me/Bkm_Botz_Support) For Support And Join Our [Updates Channel](https://telegram.dog/Bkm_Botz_Updates)) For Updates.
 
 Report Bugs, Give Feature Requests There..
 Do Fork And Star The Repository If You Liked It.
@@ -122,7 +122,7 @@ Do Fork And Star The Repository If You Liked It.
 
 - Thanks To [Mahesh](https://github.com/Mahesh0253)
 
-- Thanks To [Trojanz]
-(https://github.com/trojanzhex)
+- Thanks To [Trojanz](https://github.com/trojanzhex)
 
 - Thanks To All Everyone In This Journey
+
