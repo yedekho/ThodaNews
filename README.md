@@ -1,2 +1,3 @@
-# Lucifer-RoBoT 
-This is Telegram AutoFilter Bot and More Useful Features 🚀
+<p align="center">
+<img style="width:100px; height:100px;" src="assets/logo.jpg" alt="Lucifer RoBoT Logo">
+</p>
