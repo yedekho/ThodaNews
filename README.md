@@ -107,18 +107,18 @@ python3 bot.py
 ```
 
 
-Join Our [Telegram Group](https://t.me/+sv5flNs7yew1OTk1) For Support/Assistance And Our [Channel](https://telegram.dog/Mo_Tech_YT) For Updates.
+Join Our [Telegram Group](https: telegram.dog/Bkm_Botz_Support) For Support/Assistance And Our [Channel](https://telegram.dog/Bkm_Botz_Updates)) For Updates.
 
 Report Bugs, Give Feature Requests There..
 Do Fork And Star The Repository If You Liked It.
 
-<a href="https://telegram.dog/Mo_Tech_YT"><img alt="telegram" src="https://img.shields.io/badge/Updates-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
-<a href="https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ"><img src="https://img.shields.io/badge/Mo-Tech-FF3333.svg?logo=youtube&logoColor=FF3333"></a>
-<a href="https://telegram.dog/Mo_Tech_Group"><img alt="telegram" src="https://img.shields.io/badge/Group-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
+<a href="https://telegram.dog/Bkm_Botz_Updates"><img alt="telegram" src="https://img.shields.io/badge/Updates-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
+
+<a href="https://telegram.dog/Bkm_Botz_Support"><img alt="telegram" src="https://img.shields.io/badge/Group-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
 
 ### Credits
 
-- Thanks to [Pyrogram](https://github.com/pyrogram/pyrogram)
+- Thanks To [Pyrogram](https://github.com/pyrogram/pyrogram)
 
 - Thanks To [EvamariaTG](https://github.com/EvamariaTG)
 
