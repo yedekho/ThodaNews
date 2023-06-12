@@ -1,6 +1,4 @@
-<p align="center">
-<img style="width:100px; height:100px;" src="assets/logo.jpg" alt="Lucifer RoBoT Logo">
-</p>
+![logo](https://github.com/Mr-BKM/Lucifer-RoBoT/assets/135838870/53de409e-6b3a-46f6-a21f-904eee2543c2)
 
 <h1 align="center">
 <a href="https://telegram.dog/LuciferFilter_Robot">Lucifer-RoBoT</a>
