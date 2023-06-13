@@ -5,7 +5,7 @@ My Name Is <a href=https://t.me/{}>{}</a>, I Can Provide Movies Just Add Me To Y
 
 Created By <a href=https://t.me/BKM_TG>𝙼𝚛.𝙱𝙺𝙼 𝚃𝙶</a> """
 
-    HELP_TXT = """Hey 👋 {},
+    HELP_TXT = """Hello 👋 {},
     
 Here Is The Help For My Commands."""
 
@@ -33,10 +33,11 @@ Here Is The Help For My Commands."""
 3. Alert Buttons Have a Limit Of 64 Characters.
 
 <b>Commands and Usage:</b>
-• /filter - <code>Add a Filter In Chat</code>
-• /filters - <code>List All The Filters Of a Chat</code>
-• /del - <code>Delete a Specific Filter In Chat</code>
-• /delall - <code>Delete The Whole Filters In a Chat (Chat Owner Only)</code>"""
+• /filter - <code>Add a Filter In Chat.</code>
+• /filters - <code>List All The Filters Of a Chat.</code>
+• /del - <code>Delete a Specific Filter In Chat.</code>
+• /delall - <code>Delete The Whole Filters In a Chat.(Chat Owner Only)</code>"""
+
 
     BUTTON_TXT = """Help: <b>Buttons</b>
 
@@ -70,9 +71,9 @@ Here Is The Help For My Commands."""
 2. Send <code>/connect</code> For Connecting Me To Your PM.
 
 <b>Commands and Usage:</b>
-• /connect  - <code>Connect a Particular Chat To Your PM</code>
-• /disconnect  - <code>Disconnect From a Chat</code>
-• /connections - <code>List All Your Connections</code>"""
+• /connect  - <code>Connect a Particular Chat To Your PM.</code>
+• /disconnect  - <code>Disconnect From a Chat.</code>
+• /connections - <code>List All Your Connections.</code>"""
 
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
