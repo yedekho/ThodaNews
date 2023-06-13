@@ -104,9 +104,6 @@ python3 bot.py
 • /link - to create link for one post
 ```
 
-
-
-
 ### Credits
 
 - Thanks To [Pyrogram](https://github.com/pyrogram/pyrogram)
@@ -119,3 +116,13 @@ python3 bot.py
 
 - Thanks To All Everyone In This Journey
 
+
+### Support
+
+Join Our [Telegram Group](https://t.me/Bkm_Botz_Support) For Support And Our [Updates Channel](https://telegram.dog/Bkm_Botz_Updates) For Updates.
+
+Report Bugs, Give Feature Requests There..
+Do Fork And Star The Repository If You Liked It.
+
+<a href="https://telegram.dog/Bkm_Botz_Updates"><img alt="telegram" src="https://img.shields.io/badge/Bkm Botz-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
+<a href="https://telegram.dog/Bkm_Botz_Support"><img alt="telegram" src="https://img.shields.io/badge/Bkm Botz Support-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
