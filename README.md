@@ -48,7 +48,7 @@ Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up wi
 
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
-* Check [info.py](https://github.com/EvamariaTG/evamaria/blob/master/info.py) for more
+* Check [info.py](https://github.com/Mr-BKM/Lucifer-RoBoT/blob/main/info.py) for more
 
 ### Deploy
 
@@ -119,7 +119,7 @@ python3 bot.py
 
 ### Support
 
-Join Our [Telegram Group](https://t.me/Bkm_Botz_Support) For Support And Our [Updates Channel](https://telegram.dog/Bkm_Botz_Updates) For Updates.
+Join Our [Telegram Group](https://t.me/Bkm_Botz_Support) For Support And Join Our [Updates Channel](https://telegram.dog/Bkm_Botz_Updates) For More Updates.
 
 Report Bugs, Give Feature Requests There..
 Do Fork And Star The Repository If You Liked It.
