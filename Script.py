@@ -19,7 +19,7 @@ Here Is The Help For My Commands."""
 
     SOURCE_TXT = """<b>NOTE:</b>
     
-- Eva Maria Is a Open Source Project. 
+- Lucifer Is a Open Source Project. 
 
 - Source - <a href= https://github.com/Mr-BKM/Lucifer-RoBoT>Click Here</a> """
 
