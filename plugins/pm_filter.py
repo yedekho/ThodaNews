@@ -474,9 +474,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐂𝐥𝐨𝐬𝐞 ⊝', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.SHIV_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
+        await query.message.edit_text(
+            text=script.SHIV_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "manuelfilter":
         buttons = [[
@@ -498,9 +499,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝐂𝐥𝐨𝐬𝐞 ⊝', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.SHIVN_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
+        await query.message.edit_text(
+            text=script.SHIVN_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "button":
         buttons = [[
@@ -517,9 +519,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⇍ 𝐁𝐚𝐜𝐤 ⇏', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.DISC_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
+        await query.message.edit_text(
+            text=script.DISC_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "autofilter":
         buttons = [[
@@ -536,18 +539,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⇍ 𝐁𝐚𝐜𝐤 ⇏', callback_data='amit')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.CRAZY_TXT.format(temp.B_NAME), enums.ParseMode.HTML),            
+        await query.message.edit_text(
+            text=script.CRAZY_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "english":
         buttons = [[
             InlineKeyboardButton('⇍ 𝐁𝐚𝐜𝐤 ⇏', callback_data='amit')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.EARN2_TXT.format(temp.B_NAME), enums.ParseMode.HTML),            
+        await query.message.edit_text(
+            text=script.EARN2_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "coct":
         buttons = [[
