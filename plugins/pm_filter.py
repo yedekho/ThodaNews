@@ -437,7 +437,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('𝐒𝐭𝐚𝐭𝐮𝐬', callback_data='stats')
+            InlineKeyboardButton('𝐒𝐭𝐚𝐭𝐮𝐬', callback_data='stats'),
             InlineKeyboardButton('𝐒𝐨𝐮𝐫𝐜𝐞', callback_data='source')
         ], [
             InlineKeyboardButton('© 𝑫𝒊𝒔𝒄𝒍𝒂𝒊𝒎𝒆𝒓​ ©', callback_data='dics_btn')
