@@ -1,7 +1,8 @@
-![logo](https://github.com/Mr-BKM/Lucifer-RoBoT/assets/135838870/53de409e-6b3a-46f6-a21f-904eee2543c2)
-
+<p align="center">
+  <img src="https://telegra.ph/file/3b2c2b8ce2b86eba08628.jpg" alt="Lazy Princess Logo">
+</p>
 <h1 align="center">
-<a href="https://telegram.dog/LuciferFilter_Robot">Lucifer-RoBoT</a>
+<a href="https://telegram.dog/AutoFilterM_bot">░J░░o░░k░░e░░r░</a>
 </h1>
 
 <p align="center">
