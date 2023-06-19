@@ -453,7 +453,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('❓ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='whyjoin')
+            InlineKeyboardButton('❓ ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url ='https://github.com/crazyDeveloperz/Joker-Robot')
         ], [
             InlineKeyboardButton('⇍ ʙᴀᴄᴋ ⇏', callback_data='about')
         ]]
