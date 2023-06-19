@@ -771,22 +771,28 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"𝐇𝐞𝐫𝐞 𝐢𝐬 𝐰𝐡𝐚𝐭 𝐢 𝐟𝐨𝐮𝐧𝐝 𝐟𝐨𝐫 𝐲𝐨𝐮𝐫 𝐪𝐮𝐞𝐫𝐲 {search}"
     if imdb and imdb.get('poster'):
         try:
             z = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(250)
+            await asyncio.sleep(180)
             await z.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            m = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(180)
+            await m.delete()
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            n = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(180)
+            await n.delete()
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        p = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(180)
+        await p.delete()
     if spoll:
         await msg.message.delete()
 
@@ -829,7 +835,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("𝐈 𝐜𝐨𝐮𝐥𝐝𝐧'𝐭 𝐟𝐢𝐧𝐝 𝐚𝐧𝐲𝐭𝐡𝐢𝐧𝐠 𝐫𝐞𝐥𝐚𝐭𝐞𝐝 𝐭𝐨 𝐭𝐡𝐚𝐭. 𝐂𝐡𝐞𝐜𝐤 𝐲𝐨𝐮𝐫 𝐬𝐩𝐞𝐥𝐥𝐢𝐧𝐠")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -841,9 +847,9 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    z = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    z = await msg.reply("𝐈 𝐜𝐨𝐮𝐥𝐝𝐧'𝐭 𝐟𝐢𝐧𝐝 𝐚𝐧𝐲𝐭𝐡𝐢𝐧𝐠 𝐫𝐞𝐥𝐚𝐭𝐞𝐝 𝐭𝐨 𝐭𝐡𝐚𝐭\n𝐃𝐢𝐝 𝐲𝐨𝐮 𝐦𝐞𝐚𝐧 𝐚𝐧𝐲 𝐨𝐧𝐞 𝐨𝐟 𝐭𝐡𝐞𝐬𝐞?",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(60)
+    await asyncio.sleep(30)
     await z.delete()
 
 
