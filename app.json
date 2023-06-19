@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/Mr-BKM/Lucifer-RoBoT",
-    "repository": "https://github.com/Mr-BKM/Lucifer-RoBoT",
+    "website": "https://github.com/crazyDeveloperz/Joker-Robot",
+    "repository": "https://github.com/crazyDeveloperz/Joker-Robot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
