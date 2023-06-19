@@ -141,14 +141,16 @@ python3 bot.py
     ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
  : ➻
+ 
+ ➥ [𝑪𝒓𝒂𝒂𝒛𝒚 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓] × <a href="https://github.com/crazyDeveloperz" alt="Abishnoi69"> <img src="https://img.shields.io/badge/𝑪𝒓𝒂𝒂𝒛𝒚 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓-90302f?logo=github" /></a>  
 
 
 ### Support
 
-Join Our [Telegram Group](https://t.me/Bkm_Botz_Support) For Support And Join Our [Updates Channel](https://telegram.dog/Bkm_Botz_Updates) For More Updates.
+➥ 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 [❝𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩❞](https://t.me/crazysupportz) 𝐅𝐨𝐫 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐀𝐧𝐝 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 [❝𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥❞](https://telegram.dog/crazybotz) 𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐔𝐩𝐝𝐚𝐭𝐞𝐬.
 
-Report Bugs, Give Feature Requests There..
-Do Fork And Star The Repository If You Liked It.
+❝𝐑𝐞𝐩𝐨𝐫𝐭 𝐁𝐮𝐠𝐬, 𝐆𝐢𝐯𝐞 𝐅𝐞𝐚𝐭𝐮𝐫𝐞 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐬 𝐓𝐡𝐞𝐫𝐞..❞
+❝𝐃𝐨 𝐅𝐨𝐫𝐤 𝐀𝐧𝐝 𝐒𝐭𝐚𝐫 𝐓𝐡𝐞 𝐑𝐞𝐩𝐨𝐬𝐢𝐭𝐨𝐫𝐲 𝐈𝐟 𝐘𝐨𝐮 𝐋𝐢𝐤𝐞𝐝 𝐈𝐭.❞
 
-<a href="https://telegram.dog/Bkm_Botz_Updates"><img alt="telegram" src="https://img.shields.io/badge/Bkm Botz-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
-<a href="https://telegram.dog/Bkm_Botz_Support"><img alt="telegram" src="https://img.shields.io/badge/Bkm Botz Support-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
+<a href="https://telegram.dog/crazybotz"><img alt="telegram" src="https://img.shields.io/badge/❝𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥❞-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
+<a href="https://telegram.dog/crazysupportz"><img alt="telegram" src="https://img.shields.io/badge/❝𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐆𝐫𝐨𝐮𝐩❞-%22B1B17.svg?&logo=telegram&logoColor=white"></a>
