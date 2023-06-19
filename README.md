@@ -14,7 +14,16 @@
     <img src="https://img.shields.io/github/stars/Mr-BKM/Lucifer-RoBoT?style=for-the-badge&logo=appveyor" alt="Stars">
 </p>
 
-## Features
+## 👹 (ɢɪᴠᴇ sᴛᴀʀ)
+
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [𝐉𝐨𝐤𝐞𝐫](https://telegram.me/AutoFilterM_bot)**_
+
+## 👹 Features
+
+<details>
+<summary><h3>
+- <b>𝐂𝐥𝐢𝐜𝐤 𝐡𝐞𝐫𝐞 𝐭𝐨 𝐯𝐢𝐞𝐰 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬</b>
+</h3></summary>
 
 - [x] Auto Filter
 - [x] Manual Filter
@@ -29,10 +38,22 @@
 - [x] Stats, Users, Chats, Ban, Unban, Leave, Disable, Channel
 - [x] Spelling Check Feature
 - [x] File Store
+  </details>
 
-## Variables
+━━━━━━━━━━━━━━━━━━━━
 
-Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
+
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+
+
+
+<h2 align="center"> 
+   ⇝ ᴍᴀɪɴ ᴠᴇʀs  ⇜
+</h2>
 
 ### Required Variables
 
@@ -51,23 +72,30 @@ Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up wi
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
 * Check [info.py](https://github.com/Mr-BKM/Lucifer-RoBoT/blob/master/info.py) for more
 
-### Deploy
+━━━━━━━━━━━━━━━━━━━━
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+━━━━━━━━━━━━━━━━━━━━
 
-`You can deploy this bot anywhere.`
+## How To Deploy
 
-<details><summary>Deploy To Heroku</summary>
-<p>
-<br>
-<a href="https://heroku.com/deploy?template=https://github.com/Mr-BKM/Lucifer-RoBoT">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a>
+❝𝐘𝐨𝐮 𝐜𝐚𝐧 𝐝𝐞𝐩𝐥𝐨𝐲 𝐭𝐡𝐢𝐬 𝐛𝐨𝐭 𝐚𝐧𝐲𝐰𝐡𝐞𝐫𝐞.❞
+
+<p align="center">
+<b>𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦</b>
 </p>
-</details>
 
+<h3 align="center">
+    ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
+</h3>
+
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/crazyDeveloperz/Joker-Robot"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+
+<h3 align="center">
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/Mr-BKM/Lucifer-RoBoT
+git clone https://github.com/crazyDeveloperz/Joker-Robot
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
@@ -105,17 +133,14 @@ python3 bot.py
 • /link - to create link for one post
 ```
 
-### Credits
-
-- Thanks To [Pyrogram](https://github.com/pyrogram/pyrogram)
-
-- Thanks To [EvamariaTG](https://github.com/EvamariaTG)
-
-- Thanks To [Mahesh](https://github.com/Mahesh0253)
-
-- Thanks To [Trojanz](https://github.com/trojanzhex)
-
-- Thanks To All Everyone In This Journey
+━━━━━━━━━━━━━━━━━━━━
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+━━━━━━━━━━━━━━━━━━━━
+<h3 align="center">
+    ─「 ᴄʀᴇᴅɪᴛs 」─
+</h3>
+ : ➻
 
 
 ### Support
