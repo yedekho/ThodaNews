@@ -45,7 +45,7 @@ async def start(client, message):
             InlineKeyboardButton('〆 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 〆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton("🥂 ᴜᴘᴅᴀᴛᴇs", callback_data='smrati')
+            InlineKeyboardButton("🥂 ᴜᴘᴅᴀᴛᴇs", callback_data='amit')
             ],[
             InlineKeyboardButton('⚠️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('☣️ ᴀʙᴏᴜᴛ', callback_data='about')
@@ -81,7 +81,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("🥂 ◤✧ 𝐓𝐫𝐲𝐀𝐠𝐚𝐢𝐧 ✧◥ 🥂", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="<b>𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐦𝐲 𝐮𝐩𝐝𝐚𝐭𝐞 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐭𝐨 𝐠𝐞𝐭 𝐲𝐨𝐮𝐫 𝐦𝐨𝐯𝐢𝐞\n\n𝐜𝐥𝐢𝐜𝐤 𝐛𝐞𝐥𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐧𝐨𝐰\n\nमूवी लेने के लिए आपको नीचे ✧ 𝐉𝐨𝐢𝐧 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 ✧ पर ᴄʟɪᴄᴋ करके\n\nचैनल ᴊᴏɪɴ करना है।\n\nउसके बाद यहां नीचे *◤✧  𝐓𝐫𝐲 𝐚𝐠𝐚𝐢𝐧  ✧◥ *पर ᴄʟɪᴄᴋ करना है । आपको मूवी मिल जायेगी।</b>",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -91,7 +91,7 @@ async def start(client, message):
             InlineKeyboardButton('〆 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 〆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton("🥂 ᴜᴘᴅᴀᴛᴇs", callback_data='smrati')
+            InlineKeyboardButton("🥂 ᴜᴘᴅᴀᴛᴇs", callback_data='amit')
             ],[
             InlineKeyboardButton('⚠️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('☣️ ᴀʙᴏᴜᴛ', callback_data='about')
