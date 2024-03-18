@@ -25,7 +25,7 @@ async def allowed(_, __, message):
 async def handle_private_message(client, message):
     file_type = "media"  # Assuming file_type is defined as "media"
     if file_type == "media" and (message.media or message.document):
-        file_id, ref = unpack_new_file_id(getattr, file_type.value).file_id
+        file_id, ref = unpack_new_file_id(getattr, file_type).file_id  # Removed .value
         string = file_id
         outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
         reply_message = f"Here is your Link:\nhttps://t.me/{temp.U_NAME}?start={outstr}"
