@@ -18,7 +18,7 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
-AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "10"))
+AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "600"))
 
 BATCH_FILES = {}
 
@@ -233,11 +233,11 @@ async def start(client, message):
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
-                protect_content=True if pre == 'filep' else False,
-                )
+                protect_content=True if pre == 'filep' else False,  
+            )
             filetype = msg.media
-            file = getattr(msg, filetype)
-            title = file.file_name
+            file = getattr(msg, filetype.value)
+            title = ' ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -245,11 +245,30 @@ async def start(client, message):
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
                 except:
                     return
+            
             await msg.edit_caption(f_caption)
+            g = await msg.reply_text(
+                text=f"**ʏᴏᴜ ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ʟɪɴᴋ ᴏғ ʏᴏᴜʀ ғɪʟᴇ ᴀɴᴅ ᴀʟsᴏ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ғɪʟᴇ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 👇**",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                     [
+                         InlineKeyboardButton('🔻 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🔻', callback_data=f'generate_stream_link:{file_id}')
+                     ]
+                    ]
+                )
+            )
+            k = await msg.reply(f"<b><u>⚠️ ɪᴍᴘᴏʀᴛᴀɴᴛ ɴᴏᴛɪᴄᴇ</u></b>\n\n🗑️ 𝙁𝙞𝙡𝙚𝙨 𝙬𝙞𝙡𝙡 𝙗𝙚 𝙙𝙚𝙡𝙚𝙩𝙚𝙙 𝙞𝙣 <b><u>{AUTO_DELETE} 𝙢𝙞𝙣𝙪𝙩𝙚𝙨 𝙩𝙤 𝙖𝙫𝙤𝙞𝙙 𝙘𝙤𝙥𝙮𝙧𝙞𝙜𝙝𝙩 𝙞𝙨𝙨𝙪𝙚𝙨.𝙋𝙡𝙚𝙖𝙨𝙚 𝙛𝙤𝙧𝙬𝙖𝙧𝙙 𝙖𝙣𝙙 𝙨𝙖𝙫𝙚 𝙩𝙝𝙚𝙢...</b>",quote=True)
+            await asyncio.sleep(AUTO_DELETE_TIME)
+            await msg.delete()
+            await g.delete()
+            await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
             return
         except:
             pass
         return await message.reply('No such file exist.')
+
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)
