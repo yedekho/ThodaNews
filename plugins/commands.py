@@ -153,7 +153,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍂 ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('🍂 ᴄʜᴀɴɴᴇʟ', url='https://t.me/crazybotz')
                          ]
                         ]
                     )
@@ -170,7 +170,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍂 ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('🍂 ᴄʜᴀɴɴᴇʟ', url='https://t.me/crazybotz')
                          ]
                         ]
                     )
