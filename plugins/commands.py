@@ -248,13 +248,15 @@ async def start(client, message):
             
             await msg.edit_caption(f_caption)
             g = await msg.reply_text(
-                text=f"**ʏᴏᴜ ᴄᴀɴ ɢᴇɴᴇʀᴀᴛᴇ ᴏɴʟɪɴᴇ sᴛʀᴇᴀᴍ ʟɪɴᴋ ᴏғ ʏᴏᴜʀ ғɪʟᴇ ᴀɴᴅ ᴀʟsᴏ ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ғᴏʀ ʏᴏᴜʀ ғɪʟᴇ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ 👇**",
+                text=f"**👇 Join Our letest channels 👇**",
                 quote=True,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                         InlineKeyboardButton('🔻 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ / ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🔻', callback_data=f'generate_stream_link:{file_id}')
+                        InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
+                         ],[
+                        InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
                      ]
                     ]
                 )
@@ -267,8 +269,7 @@ async def start(client, message):
             return
         except:
             pass
-        return await message.reply('No such file exist.')
-
+            
     files = files_[0]
     title = files.file_name
     size=get_size(files.file_size)
