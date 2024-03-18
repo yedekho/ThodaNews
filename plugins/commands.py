@@ -564,3 +564,29 @@ async def save_template(client, message):
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
+
+from plugins.users_api import get_user, update_user_info
+
+@Client.on_message(filters.command('set_shortner') & filters.private)
+async def shortener_settings_handler(bot, m: Message):
+    user_id = m.from_user.id
+    user = await get_user(user_id)
+    cmd = m.command
+    if len(cmd) != 3:
+        s = script.SHORTENER_API_MESSAGE.format(base_site=user["base_site"], shortener_api=user["shortener_api"])
+        return await m.reply(s)
+    base_site = m.command[1]
+    shortener_api = m.command[2]
+
+    await update_user_info(user_id, {"base_site": base_site, "shortener_api": shortener_api})
+    await m.reply("**Your shortener website and API key were added successfully. ✅**")
+
+@Client.on_message(filters.command('shortner_info') & filters.private)
+async def check_shortener_settings(bot, m: Message):
+    user_id = m.from_user.id
+    user = await get_user(user_id)
+    base_site = user.get("base_site", "Not set")
+    shortener_api = user.get("shortener_api", "Not set")
+
+    message_text = f"<b>ᴄᴜʀʀᴇɴᴛ  ꜱᴛᴀᴛᴜꜱ   📊\n\n**ꜱʜᴏʀᴛᴇɴᴇʀ ᴡᴇʙꜱɪᴛᴇ :** `{base_site}`\n**ᴀᴘɪ ᴋᴇʏ:** `{shortener_api}`"
+    await m.reply(message_text)
