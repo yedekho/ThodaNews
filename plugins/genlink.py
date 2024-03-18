@@ -21,18 +21,18 @@ async def allowed(_, __, message):
         return True
     return False
 
-@Client.on_message(filters.forwarded() & filters.private)
-async def forward_message(client, message):
+@Client.on_message(filters.forwarded & filters.private)
+async def forward_message(bot, message):
     replied = message.reply_to_message
-    if replied.media is None:
+    if replied is None or replied.media is None:
         return await message.reply("No media found in the forwarded message")
     file_type = replied.media
     if file_type not in [enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT]:
         return await message.reply("Reply to a supported media")
-    file_id, ref = await client.unpack_new_file_id((getattr(replied, file_type.value)).file_id)
+    file_id, ref = await bot.unpack_new_file_id(getattr(replied, file_type.value).file_id)
     string = file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    await message.reply(f"Here is your Link:\nhttps://t.me/{temp.U_NAME}?start={outstr}")
+    await message.reply(f"Here is your Link:\nhttps://t.me/your_username?start={outstr}")
 
 @Client.on_message(filters.command(['link', 'plink']) & filters.create(allowed))
 async def gen_link_s(bot, message):
