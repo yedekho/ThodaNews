@@ -1,4 +1,6 @@
+
 import os
+from os import getenv, environ
 import logging
 import random
 import asyncio
@@ -16,7 +18,13 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
+AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "10"))
+
 BATCH_FILES = {}
+
+async def delete_after_delay(message: Message, delay):
+    await asyncio.sleep(AUTO_DELETE_TIME)
+    await message.delete()
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
@@ -137,7 +145,7 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{title}"
             try:
-                sh = await client.send_cached_media(
+                h = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
@@ -150,10 +158,11 @@ async def start(client, message):
                         ]
                     )
                 )
+                asyncio.create_task(delete_after_delay(k, AUTO_DELETE_TIME))
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
-                sh = await client.send_cached_media(
+                await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
@@ -196,7 +205,8 @@ async def start(client, message):
                     file_name = getattr(media, 'file_name', '')
                     f_caption = getattr(msg, 'caption', file_name)
                 try:
-                    await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
+                    k = await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
+                    asyncio.create_task(delete_after_delay(k, AUTO_DELETE_TIME))
                 except FloodWait as e:
                     await asyncio.sleep(e.x)
                     await msg.copy(message.chat.id, caption=f_caption, protect_content=True if protect == "/pbatch" else False)
@@ -260,8 +270,7 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-        await asyncio.sleep(600)
-        await msg.delete()
+        
     
                     
 
