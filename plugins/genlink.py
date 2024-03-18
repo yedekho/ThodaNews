@@ -25,13 +25,13 @@ async def allowed(_, __, message):
 async def handle_private_message(client, message):
     file_type = "media"  # Assuming file_type is defined as "media"
     if file_type == "media" and (message.media or message.document):
-        file_id, ref = unpack_new_file_id((getattr(replied, file_type.value)).file_id)
+        file_id, ref = unpack_new_file_id((getattr, file_type.value)).file_id)
         string = file_id
         outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
         reply_message = f"Here is your Link:\nhttps://t.me/{temp.U_NAME}?start={outstr}"
         await client.send_message(message.chat.id, reply_message)
         
-@Client.on_message(filters.command(['link', 'plink']) & filters.create(allowed))
+@Client.on_message(filters.command(['genlink', 'plink']) & filters.create(allowed))
 async def gen_link_s(bot, message):
     replied = message.reply_to_message
     if not replied:
