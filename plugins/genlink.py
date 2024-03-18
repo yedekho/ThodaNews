@@ -23,7 +23,7 @@ async def allowed(_, __, message):
 
 @Client.on_message(filters.private & filters.create(allowed))
 async def handle_private_message(client, message):
-    if file_type not in [enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT]:
+    if message.media or message.document:
         file_id, ref = unpack_new_file_id(getattr, file_type.value).file_id
         string = file_id
         outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
