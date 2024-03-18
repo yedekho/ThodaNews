@@ -50,18 +50,14 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('〆 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 〆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('🍟 Search Movies / Series 🍟', url=f"https://t.me/smovierequestgroup")
             ],[
-            InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton("🥂 ᴜᴘᴅᴀᴛᴇs", callback_data='amit')
+            InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
             ],[
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('☣️ ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        await message.reply_text(script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -96,13 +92,11 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('〆 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 〆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('🍟 Search Movies / Series 🍟', url=f"https://t.me/smovierequestgroup")
             ],[
-            InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton("🥂 ᴜᴘᴅᴀᴛᴇs", callback_data='amit')
+            InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
             ],[
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('☣️ ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -153,12 +147,14 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍂 ᴄʜᴀɴɴᴇʟ', url='https://t.me/crazybotz')
+                          InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
+                          ],[
+                          InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")   
                          ]
                         ]
                     )
                 )
-                asyncio.create_task(delete_after_delay(k, AUTO_DELETE_TIME))
+                asyncio.create_task(delete_after_delay(h, AUTO_DELETE_TIME))
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -170,7 +166,9 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🍂 ᴄʜᴀɴɴᴇʟ', url='https://t.me/crazybotz')
+                          InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
+                         ],[
+                          InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
                          ]
                         ]
                     )
