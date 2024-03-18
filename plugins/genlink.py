@@ -22,13 +22,13 @@ async def allowed(_, __, message):
     return False
 
 @Client.on_message(filters.private & filters.create(allowed))
-async def handle_private_message(message):
+async def handle_private_message(client, message):
     if file_type not in [enums.MessageMediaType.VIDEO, enums.MessageMediaType.AUDIO, enums.MessageMediaType.DOCUMENT]:
         file_id, ref = unpack_new_file_id(getattr, file_type.value).file_id
         string = file_id
         outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
         reply_message = f"Here is your Link:\nhttps://t.me/{temp.U_NAME}?start={outstr}"
-        await message.reply(reply_message)
+        await client.send_message(message.chat.id, reply_message)
 
 @Client.on_message(filters.command(['link', 'plink']) & filters.create(allowed))
 async def gen_link_s(bot, message):
