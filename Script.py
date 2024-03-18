@@ -148,6 +148,8 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 🪁 ғɪʟᴇs sᴀᴠᴇᴅ: <code>{}</code> MIB
 🎡 ғʀᴇᴇ sᴛᴏʀᴀɢᴇ: <code>{}</code> MIB"""
 
+    CAPTION = """join my channel"""
+
     LOG_TEXT_G = """#NewGroup #joker
 🚏 Group = {}(<code>{}</code>)
 ⚡ Total Members = <code>{}</code>
