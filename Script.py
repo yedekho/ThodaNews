@@ -1,10 +1,5 @@
 class script(object):
-    START_TXT = """<b>ʜᴀʏ 👋 {},
-    
-ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ + ᴍᴀɴᴜᴀʟꜰɪʟᴛᴇʀ ʙᴏᴛ.
-ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ ᴡɪʟʟ ɢɪᴠᴇ ᴍᴏᴠɪᴇꜱ ᴏʀ ꜱᴇʀɪᴇꜱ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴘᴍ
-
-🌿 ʙʏ : <a href='t.me/heartlesssn'>ᴄʀᴀᴢʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ</a></b>"""
+    START_TXT = """<b>Hey 👋 {}, I am only File Store Bot</b>"""
 
     HELP_TXT = """<b>ʜᴇy {}
 
