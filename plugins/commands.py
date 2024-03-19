@@ -71,8 +71,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🥂 ◤✧ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✧◥ 🥂", url=invite_link.invite_link
-                )
+                    "⛔ Join Channel 1 ⛔", url=f"https://t.me/+BxEiZyFmh79iNDBl")
             ]
         ]
 
@@ -80,9 +79,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("🥂 ◤✧ 𝐓𝐫𝐲𝐀𝐠𝐚𝐢𝐧 ✧◥ 🥂", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("♻️ Try Again ♻️", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("🥂 ◤✧ 𝐓𝐫𝐲𝐀𝐠𝐚𝐢𝐧 ✧◥ 🥂", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐦𝐲 𝐮𝐩𝐝𝐚𝐭𝐞 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐭𝐨 𝐠𝐞𝐭 𝐲𝐨𝐮𝐫 𝐦𝐨𝐯𝐢𝐞\n\n𝐜𝐥𝐢𝐜𝐤 𝐛𝐞𝐥𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐧𝐨𝐰\n\nमूवी लेने के लिए आपको नीचे ✧ 𝐉𝐨𝐢𝐧 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 ✧ पर ᴄʟɪᴄᴋ करके\n\nचैनल ᴊᴏɪɴ करना है।\n\nउसके बाद यहां नीचे ✧ 𝐓𝐫𝐲 𝐚𝐠𝐚𝐢𝐧 ✧ पर ᴄʟɪᴄᴋ करना है । आपको मूवी मिल जायेगी।**",
