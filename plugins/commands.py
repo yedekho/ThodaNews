@@ -50,8 +50,6 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🍟 Search Movies / Series 🍟', url=f"https://t.me/smovierequestgroup")
-            ],[
             InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
             ],[
             InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
@@ -71,7 +69,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "⛔ Join Channel 1 ⛔", url=f"https://t.me/+BxEiZyFmh79iNDBl")
+                    "⛔ Join Channel ⛔", url=f"https://t.me/+BxEiZyFmh79iNDBl")
             ]
         ]
 
@@ -84,15 +82,13 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐦𝐲 𝐮𝐩𝐝𝐚𝐭𝐞 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 𝐭𝐨 𝐠𝐞𝐭 𝐲𝐨𝐮𝐫 𝐦𝐨𝐯𝐢𝐞\n\n𝐜𝐥𝐢𝐜𝐤 𝐛𝐞𝐥𝐥𝐨𝐰 𝐛𝐮𝐭𝐭𝐨𝐧 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐧𝐨𝐰\n\nमूवी लेने के लिए आपको नीचे ✧ 𝐉𝐨𝐢𝐧 𝐜𝐡𝐚𝐧𝐧𝐞𝐥 ✧ पर ᴄʟɪᴄᴋ करके\n\nचैनल ᴊᴏɪɴ करना है।\n\nउसके बाद यहां नीचे ✧ 𝐓𝐫𝐲 𝐚𝐠𝐚𝐢𝐧 ✧ पर ᴄʟɪᴄᴋ करना है । आपको मूवी मिल जायेगी।**",
+            text="** You have to join my Channel to get your movies / series \n\nclick bellow button to join now.\n\nमूवी लेने के लिए आपको नीचे ⛔ Join Channel ⛔ पर Click करके चैनल Join करना है। उसके बाद यहां नीचे ♻️ Try Again ♻️ पर ᴄʟɪᴄᴋ करना है । आपको मूवी मिल जायेगी।**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('🍟 Search Movies / Series 🍟', url=f"https://t.me/smovierequestgroup")
-            ],[
             InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
             ],[
             InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
@@ -246,25 +242,6 @@ async def start(client, message):
                     return
             
             await msg.edit_caption(f_caption)
-            g = await msg.reply_text(
-                text=f"**👇 Join Our letest channels 👇**",
-                quote=True,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                     [
-                        InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
-                         ],[
-                        InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
-                     ]
-                    ]
-                )
-            )
-            k = await msg.reply(f"<b><u>⚠️ ɪᴍᴘᴏʀᴛᴀɴᴛ ɴᴏᴛɪᴄᴇ</u></b>\n\n🗑️ 𝙁𝙞𝙡𝙚𝙨 𝙬𝙞𝙡𝙡 𝙗𝙚 𝙙𝙚𝙡𝙚𝙩𝙚𝙙 𝙞𝙣 <b><u>{AUTO_DELETE} 𝙢𝙞𝙣𝙪𝙩𝙚𝙨 𝙩𝙤 𝙖𝙫𝙤𝙞𝙙 𝙘𝙤𝙥𝙮𝙧𝙞𝙜𝙝𝙩 𝙞𝙨𝙨𝙪𝙚𝙨.𝙋𝙡𝙚𝙖𝙨𝙚 𝙛𝙤𝙧𝙬𝙖𝙧𝙙 𝙖𝙣𝙙 𝙨𝙖𝙫𝙚 𝙩𝙝𝙚𝙢...</b>",quote=True)
-            await asyncio.sleep(AUTO_DELETE_TIME)
-            await msg.delete()
-            await g.delete()
-            await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
             return
         except:
             pass
