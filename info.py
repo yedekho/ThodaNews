@@ -13,8 +13,8 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '27499182'))
-API_HASH = environ.get('API_HASH', '9c58142ef6abed28808a50e3e983c39c')
+API_ID = int(environ.get('API_ID', '29996160'))
+API_HASH = environ.get('API_HASH', '55305b23a72c1e001a0fb21b7bfe0785')
 BOT_TOKEN = environ.get('BOT_TOKEN', "6419607127:AAF6_TA2KBiumlZJSh78aE_FXhvU1CiKxRg")
 
 # Bot settings
@@ -23,7 +23,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/4448d2deca639719259aa.jpg https://telegra.ph/file/1f42517e5b7cef63fafb3.jpg https://telegra.ph/file/208b459e2218921bffaf9.jpg https://telegra.ph/file/f856bca5fa55d27e7ee51.jpg https://telegra.ph/file/eab4cc11e438f2af4cd18.jpg https://telegra.ph/file/8a0060621de7b29924991.jpg https://telegra.ph/file/a6d8d328f60a1c2a61c86.jpg https://telegra.ph/file/080d3deaa4ee727dee4d0.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5089010547').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -33,7 +33,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://FileStoreClone:FileStoreClone@cluster0.ay8whzk.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://ideafy:ideafy@cluster0.8rymk7v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "crzydeveloper")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
