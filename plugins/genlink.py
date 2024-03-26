@@ -5,6 +5,7 @@ from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, UsernameI
 from info import ADMINS, LOG_CHANNEL, FILE_STORE_CHANNEL, PUBLIC_FILE_STORE
 from database.ia_filterdb import unpack_new_file_id
 from utils import temp
+from database.users import get_user, get_short_link
 from pyrogram.types import Message
 import re
 import os
@@ -37,12 +38,16 @@ async def gen_link_s(bot, message):
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    # Construct the long URL
+    user_id = message.from_user.id
+    user = await get_user(user_id)
+    if user["shortener_api"] is None or user["base_site"] is None:
+        return await message.reply("<b>𝙁𝙞𝙧𝙨𝙩 𝘾𝙤𝙣𝙣𝙚𝙘𝙩 𝙒𝙞𝙩𝙝 𝙔𝙤𝙪𝙧 𝙎𝙝𝙤𝙧𝙩𝙣𝙚𝙧 𝘼𝙘𝙘𝙤𝙪𝙣𝙩 🤑\n\n <b><u>ʜᴏᴡ ᴛᴏ ᴀᴅᴅ sʜᴏʀᴛɴᴇʀ 👨‍💻</u> \n\n 👉 <code>/set_shortner your_shortener_website your_shortener_api</code> \n\n <u>♻️ ᴇxᴀᴍᴘʟᴇ</u> \n\n 👉 /set_shortner omegaLinks.in 33cebb615b95e76d797862d76d0f9352acd0fcc9\n\n ⚠️ ᴛʜɪꜱ ʙᴏᴛ ᴡɪʟʟ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴄᴏɴᴠᴇʀᴛꜱ ʟɪɴᴋꜱ ᴡɪᴛʜ ʏᴏᴜʀ ᴀᴘɪ ᴀɴᴅ ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ʏᴏᴜʀ ʟɪɴᴋꜱ.")
+        
     long_url = f"https://telegram.me/{temp.U_NAME}?start={outstr}"
-    # Shorten the URL using pyshorteners
     shortener = pyshorteners.Shortener()
     short_url = shortener.tinyurl.short(long_url)
-    await message.reply(f"Here is your Long Link:\n{long_url}\n\nHere is your Shortened Link:\n{short_url}")
+    short_link = await get_short_link(user, long_url)
+    await message.reply(f"Here is your Long Link:\n{long_url}\n\nHere is your Shortened Link:\n{short_url}\n\nHere is your Shortened Link: \n{short_link} ")
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
