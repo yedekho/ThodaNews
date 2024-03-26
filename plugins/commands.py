@@ -251,11 +251,9 @@ async def start(client, message):
                     ]
                 )
             )
-            k = await msg.reply(f"𝖳𝖧𝖨𝖲 𝖵𝖨𝖣𝖤𝖮 𝖶𝖨𝖫𝖫 𝖠𝖴𝖳𝖮𝖬𝖠𝖳𝖨𝖢𝖠𝖫𝖫𝖸 𝖡𝖤 𝖣𝖤𝖫𝖤𝖳𝖤𝖣 𝖨𝖭 10 𝖬𝖨𝖭 ⚠️\n\n𝙳𝚞𝚎 𝚝𝚘 𝚜𝚊𝚏𝚎𝚝𝚢 𝚛𝚎𝚊𝚜𝚘𝚗𝚜.",quote=True)
             await asyncio.sleep(AUTO_DELETE_TIME)
             await msg.delete()
             await g.delete()
-            await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
             return
         except:
             pass
