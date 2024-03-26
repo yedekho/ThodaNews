@@ -46,7 +46,7 @@ async def gen_link_s(bot, message):
     long_url = f"https://telegram.me/{temp.U_NAME}?start={outstr}"
     shortener = pyshorteners.Shortener()
     short_url = shortener.tinyurl.short(long_url)
-    short_link = await get_short_link(user, long_url)
+    short_link = await get_short_link(user, short_url)
     await message.reply(f"Here is your Long Link:\n{long_url}\n\nHere is your Shortened Link:\n{short_url}\n\nHere is your Shortened Link: \n{short_link} ")
     
     
