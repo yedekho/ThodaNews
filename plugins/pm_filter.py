@@ -37,12 +37,11 @@ async def pm_text(bot, message):
     user_id = message.from_user.id
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
-    kk = await message.reply_text(
+    await message.reply_text(
          text=f"𝖲𝗈𝗋𝗋𝗒 {user} 😔 𝖳𝗁𝗂𝗌 𝖻𝗈𝗍 𝗂𝗌 𝗈𝗇𝗅𝗒 𝖿𝗈𝗋 𝗉𝗋𝗈𝗏𝗂𝖽𝗂𝗇𝗀 𝗏𝗂𝖽𝖾𝗈𝗌...\n\nHelp 🤔 / Promotions 📛 👇🏻\n@wownewss_helpbot",   
          reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Instagram", url=f"instagram.com/wownewss"),InlineKeyboardButton("Telegram", url=f"telegram.me/wownewsss")]])
     )
-    await asyncio.sleep(60)
-    await kk.delete()
+    
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
