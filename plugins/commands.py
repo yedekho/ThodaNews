@@ -31,10 +31,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🥂 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/crazybotz')
+                InlineKeyboardButton("Instagram", url=f"http://instagram.com/wownewss")
             ],
             [
-                InlineKeyboardButton('⚠️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('Telegram', url=f"http://telegram.me/wownewsss")
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -142,9 +142,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
-                          ],[
-                          InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")   
+                          InlineKeyboardButton("𝗡𝗘𝗘𝗗 𝗛𝗘𝗟𝗣 🤔", url=f"telegram.me/wownewss_helpbot")
                          ]
                         ]
                     )
@@ -161,9 +159,7 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
-                         ],[
-                          InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
+                          InlineKeyboardButton("𝗡𝗘𝗘𝗗 𝗛𝗘𝗟𝗣 🤔", url=f"telegram.me/wownewss_helpbot")
                          ]
                         ]
                     )
@@ -266,9 +262,7 @@ async def start(client, message):
         )
         
     
-                    
-
-@Client.on_message(filters.command('channel') & filters.user(ADMINS))
+@Client.on_message(filters.command('cdfhannel') & filters.user(ADMINS))
 async def channel_info(bot, message):
            
     """Send basic information of channel"""
@@ -307,7 +301,7 @@ async def log_file(bot, message):
     except Exception as e:
         await message.reply(str(e))
 
-@Client.on_message(filters.command('delete') & filters.user(ADMINS))
+@Client.on_message(filters.command('delefdte') & filters.user(ADMINS))
 async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
@@ -355,7 +349,7 @@ async def delete(bot, message):
                 await msg.edit('File not found in database')
 
 
-@Client.on_message(filters.command('deleteall') & filters.user(ADMINS))
+@Client.on_message(filters.command('delefdfteall') & filters.user(ADMINS))
 async def delete_all_index(bot, message):
     await message.reply_text(
         'This will delete all indexed files.\nDo you want to continue??',
@@ -384,7 +378,7 @@ async def delete_all_index_confirm(bot, message):
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
 
-@Client.on_message(filters.command('settings'))
+@Client.on_message(filters.command('settindsdgs'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
@@ -498,7 +492,7 @@ async def settings(client, message):
 
 
 
-@Client.on_message(filters.command('set_template'))
+@Client.on_message(filters.command('set_tempsdlate'))
 async def save_template(client, message):
     sts = await message.reply("Checking template")
     userid = message.from_user.id if message.from_user else None
@@ -543,7 +537,7 @@ async def save_template(client, message):
 
 from plugins.users_api import get_user, update_user_info
 
-@Client.on_message(filters.command('set_shortner') & filters.private)
+@Client.on_message(filters.command('sd') & filters.private)
 async def shortener_settings_handler(bot, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
@@ -557,7 +551,7 @@ async def shortener_settings_handler(bot, m: Message):
     await update_user_info(user_id, {"base_site": base_site, "shortener_api": shortener_api})
     await m.reply("**Your shortener website and API key were added successfully. ✅**")
 
-@Client.on_message(filters.command('shortner_info') & filters.private)
+@Client.on_message(filters.command('ssd') & filters.private)
 async def check_shortener_settings(bot, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
