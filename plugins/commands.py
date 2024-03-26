@@ -18,7 +18,7 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
-AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "600"))
+AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "30"))
 
 BATCH_FILES = {}
 
@@ -217,8 +217,6 @@ async def start(client, message):
                     continue
             await asyncio.sleep(1) 
         return await sts.delete()
-        
-
     files_ = await get_file_details(file_id)           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
@@ -240,6 +238,8 @@ async def start(client, message):
                     return
             
             await msg.edit_caption(f_caption)
+            await asyncio.sleep(AUTO_DELETE_TIME)
+            await msg.delete()
             return
         except:
             pass
