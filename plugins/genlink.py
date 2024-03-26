@@ -1,4 +1,5 @@
 import re
+import pyshorteners
 from pyrogram import filters, Client, enums
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, UsernameInvalid, UsernameNotModified
 from info import ADMINS, LOG_CHANNEL, FILE_STORE_CHANNEL, PUBLIC_FILE_STORE
@@ -35,7 +36,13 @@ async def gen_link_s(bot, message):
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    await message.reply(f"Here is your Link:\nhttps://telegram.me/{temp.U_NAME}?start={outstr}")
+    long_url = f"https://telegram.me/{temp.U_NAME}?start={outstr}"
+    response = requests.get(f"http://tinyurl.com/api-create.php?url={long_url}")
+    if response.status_code == 200:
+        short_url = response.text
+        await message.reply(f"Here is your Link:\n{short_url}")
+    else:
+        await message.reply("Failed to shorten the URL.")
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
