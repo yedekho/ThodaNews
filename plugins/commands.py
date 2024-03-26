@@ -13,6 +13,7 @@ from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
 from database.connections_mdb import active_connection
+from database.users import get_user, update_user_info
 import re
 import json
 import base64
@@ -238,8 +239,23 @@ async def start(client, message):
                     return
             
             await msg.edit_caption(f_caption)
+            g = await msg.reply_text(
+                text=f"𝖳𝖧𝖨𝖲 𝖵𝖨𝖣𝖤𝖮 𝖶𝖨𝖫𝖫 𝖠𝖴𝖳𝖮𝖬𝖠𝖳𝖨𝖢𝖠𝖫𝖫𝖸 𝖡𝖤 𝖣𝖤𝖫𝖤𝖳𝖤𝖣 𝖨𝖭 10 𝖬𝖨𝖭 ⚠️\n\n𝙳𝚞𝚎 𝚝𝚘 𝚜𝚊𝚏𝚎𝚝𝚢 𝚛𝚎𝚊𝚜𝚘𝚗𝚜.",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                     [
+                         InlineKeyboardButton("𝗡𝗘𝗘𝗗 𝗛𝗘𝗟𝗣 🤔", url=f"telegram.me/wownewss_helpbot")
+                     ]
+                    ]
+                )
+            )
+            k = await msg.reply(f"<b><u>⚠️ ɪᴍᴘᴏʀᴛᴀɴᴛ ɴᴏᴛɪᴄᴇ</u></b>\n\n🗑️ 𝙁𝙞𝙡𝙚𝙨 𝙬𝙞𝙡𝙡 𝙗𝙚 𝙙𝙚𝙡𝙚𝙩𝙚𝙙 𝙞𝙣 <b><u>{AUTO_DELETE} 𝙢𝙞𝙣𝙪𝙩𝙚𝙨 𝙩𝙤 𝙖𝙫𝙤𝙞𝙙 𝙘𝙤𝙥𝙮𝙧𝙞𝙜𝙝𝙩 𝙞𝙨𝙨𝙪𝙚𝙨.𝙋𝙡𝙚𝙖𝙨𝙚 𝙛𝙤𝙧𝙬𝙖𝙧𝙙 𝙖𝙣𝙙 𝙨𝙖𝙫𝙚 𝙩𝙝𝙚𝙢...</b>",quote=True)
             await asyncio.sleep(AUTO_DELETE_TIME)
             await msg.delete()
+            await g.delete()
+            await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
             return
         except:
             pass
@@ -537,9 +553,8 @@ async def save_template(client, message):
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
 
-from plugins.users_api import get_user, update_user_info
 
-@Client.on_message(filters.command('sd') & filters.private)
+@Client.on_message(filters.command('set_shortner') & filters.private)
 async def shortener_settings_handler(bot, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
@@ -552,13 +567,3 @@ async def shortener_settings_handler(bot, m: Message):
 
     await update_user_info(user_id, {"base_site": base_site, "shortener_api": shortener_api})
     await m.reply("**Your shortener website and API key were added successfully. ✅**")
-
-@Client.on_message(filters.command('ssd') & filters.private)
-async def check_shortener_settings(bot, m: Message):
-    user_id = m.from_user.id
-    user = await get_user(user_id)
-    base_site = user.get("base_site", "Not set")
-    shortener_api = user.get("shortener_api", "Not set")
-
-    message_text = f"<b>ᴄᴜʀʀᴇɴᴛ  ꜱᴛᴀᴛᴜꜱ   📊\n\n**ꜱʜᴏʀᴛᴇɴᴇʀ ᴡᴇʙꜱɪᴛᴇ :** `{base_site}`\n**ᴀᴘɪ ᴋᴇʏ:** `{shortener_api}`"
-    await m.reply(message_text)
