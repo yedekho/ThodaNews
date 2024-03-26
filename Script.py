@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b>Heyaa 👀 {},
+    START_TXT = """<b>Heyaa 👀 {}
     
 𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖶𝗈𝗋𝗅𝖽 𝗈𝖿 
 @wownewsss 👽☠️ 
