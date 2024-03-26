@@ -50,9 +50,9 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton("🦋 Latest Movie Channel Link 🦋", url=f"https://t.me/+BxEiZyFmh79iNDBl")
+            InlineKeyboardButton("Instagram", url=f"http://instagram.com/wownewss")
             ],[
-            InlineKeyboardButton('🥵 Latest Viral Channel Link 🥵', url=f"https://t.me/+PkLpDVnqDY4zYWZl")
+            InlineKeyboardButton('Telegram', url=f"http://telegram.me/wownewsss")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
