@@ -15,8 +15,8 @@ async def get_short_link(user, link):
     data = response.json()
     if data["status"] == "success" or rget.status_code == 200:
         return data["shortenedUrl"]
-
-  async def get_user(user_id):
+        
+async def get_user(user_id):
     user_id = int(user_id)
     user = await col.find_one({"user_id": user_id})
     if not user:
