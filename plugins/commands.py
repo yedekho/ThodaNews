@@ -18,7 +18,7 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
-AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "30"))
+AUTO_DELETE_TIME = int(environ.get("AUTO_DELETE_TIME", "600"))
 
 BATCH_FILES = {}
 
