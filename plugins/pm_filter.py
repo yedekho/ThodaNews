@@ -379,7 +379,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("It's a Request 🙏🏻
+            await query.answer("Its a Request 🙏🏻
 
 Please Click the Below Button & Join Channel before Clicking Try Again 🥺😒", show_alert=True)
             return
