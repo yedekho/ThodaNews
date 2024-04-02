@@ -72,7 +72,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "⛔ Join Channel ⛔", url=f"https://t.me/+BxEiZyFmh79iNDBl")
+                    "Join the Channel ✅", url=f"https://t.me/+BxEiZyFmh79iNDBl")
             ]
         ]
 
@@ -80,12 +80,26 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("♻️ Try Again ♻️", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("Try Again ⏺️", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("Try Again ⏺️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="** You have to join my Channel to get your movies / series \n\nclick bellow button to join now.\n\nमूवी लेने के लिए आपको नीचे ⛔ Join Channel ⛔ पर Click करके चैनल Join करना है। उसके बाद यहां नीचे ♻️ Try Again ♻️ पर ᴄʟɪᴄᴋ करना है । आपको मूवी मिल जायेगी।**",
+            text="**𝗛𝗲𝗹𝗹𝗼 ❤️👋🏻
+𝖳𝗁𝗂𝗌 𝖻𝗈𝗍 𝖺𝗇𝖽 𝖼𝗁𝖺𝗇𝗇𝖾𝗅 𝗆𝖺𝗒 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝖺𝗇𝗒𝗍𝗂𝗆𝖾 😞
+
+👉🏻 𝖯𝗅𝖾𝖺𝗌𝖾 𝖢𝗅𝗂𝖼𝗄 𝗍𝗁𝖾 𝖻𝗎𝗍𝗍𝗈𝗇 𝖻𝖾𝗅𝗈𝗐 𝖺𝗇𝖽 𝗃𝗈𝗂𝗇 𝗍𝗁𝖾 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 ✅
+
+👉🏻 𝖢𝗈𝗆𝖾 𝖻𝖺𝖼𝗄 𝖺𝗇𝖽 𝗉𝗋𝖾𝗌𝗌 𝖳𝗋𝗒 𝖺𝗀𝖺𝗂𝗇 ⏺️
+
+•••••••••••••••••••••••••••••••••••••••••••••
+
+𝗡𝗮𝗺𝗮𝘀𝘁𝗲 ❤️👋🏻
+𝖸𝖾 𝖼𝗁𝖺𝗇𝗇𝖾𝗅 𝖺𝗎𝗋 𝖻𝗈𝗍 𝗄𝖺𝖻𝗁𝗂 𝖻𝗁𝗂 𝖽𝖾𝗅𝖾𝗍𝖾 𝗁𝗈 𝗌𝖺𝗄𝗍𝖺 𝗁𝖺𝗂 😞
+
+👉🏻 𝖭𝗂𝖼𝗁𝖾 𝖶𝖺𝗅𝖾 𝖻𝗎𝗍𝗍𝗈𝗇 𝗉𝖾 𝖼𝗅𝗂𝖼𝗄 𝖪𝖺𝗋𝗈 𝖺𝗇𝖽 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖩𝗈𝗂𝗇 𝖪𝖺𝗋𝗈 ✅
+
+👉🏻 𝖯𝗁𝗂𝗋 𝖺𝗄𝖾 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇 pe 𝖼𝗅𝗂𝖼𝗄 𝖪𝖺𝗋𝗈 ⏺️**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
